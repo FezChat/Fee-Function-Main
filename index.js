@@ -7,7 +7,7 @@ import { saveUserDetails, getAllUsers, deleteUser, deleteAllUsers, cleanupOldBot
 const app = express();
 const PORT = process.env.PORT || 3000;
 const MAX_BOTS = 50;
-const ADMIN_PASSWORD = "toxicadmin2025";
+const ADMIN_PASSWORD = "frediadmin2026";
 
 // Enable proxy for Heroku
 app.set("trust proxy", 1);
@@ -109,6 +109,6 @@ app.post("/api/admin/delete-all", adminAuth, async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => res.send("Toxic Bot Hosting server is running!"));
+app.get("/", (req, res) => res.send("Fredi Bot Hosting server is running!"));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
