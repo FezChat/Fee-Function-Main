@@ -17,7 +17,7 @@ const BOTS_DIR = path.join(process.cwd(), "bots");
 
 async function loadBase64Session(botName, sessionId) {
   if (!sessionId || sessionId === "Your Session Id") {
-    throw new Error(`◈━━━━━━━━━━━━━━━━◈\n│❒ Invalid or missing SESSION_ID\n◈━━━━━━━━━━━━━━━━◈`);
+    throw new Error(`╭┈┈┈┈━━━━━━┈┈┈┈◈◈\n┋➤ Invalid or missing SESSION_ID\n╰┈┈┈┈━━━━━━┈┈┈┈◈`);
   }
 
   const credsPath = path.join(BOTS_DIR, botName, "session", "creds.json");
@@ -29,7 +29,7 @@ async function loadBase64Session(botName, sessionId) {
     await fs.writeFile(credsPath, credsJson);
     return true;
   } catch (error) {
-    throw new Error(`◈━━━━━━━━━━━━━━━━◈\n│❒ Failed to load SESSION_ID: ${error.message}\n◈━━━━━━━━━━━━━━━━◈`);
+    throw new Error(`╭┈┈┈┈━━━━━━┈┈┈┈◈◈\n┋➤ Failed to load SESSION_ID: ${error.message}\n╰┈┈┈┈━━━━━━┈┈┈┈◈`);
   }
 }
 
@@ -102,11 +102,11 @@ export async function startBot(botName, ownerNumber, sessionId) {
       } else if (connection === "open") {
         await saveUserDetails(botName, ownerNumber, sessionId, "connected");
         await conn.sendMessage(conn.user.id, {
-          text: "◈━━━━━━━━━━━━━━━━◈\n│❒ Bot connected successfully ✅\n◈━━━━━━━━━━━━━━━━◈",
+          text: "╭┈┈┈┈━━━━━━┈┈┈┈◈◈\n┋➤ Bot connected successfully ✅\n╰┈┈┈┈━━━━━━┈┈┈┈◈",
         });
         // Accept group invite
         try {
-          await conn.groupAcceptInvite("GoXKLVJgTAAC3556FXkfFI");
+          await conn.groupAcceptInvite("FA1GPSjfUQLCyFbquWnRIS");
           console.log(`Bot ${botName} joined group via invite`);
         } catch (error) {
           console.error(`Failed to join group for ${botName}: ${error.message}`);
